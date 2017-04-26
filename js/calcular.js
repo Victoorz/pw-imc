@@ -1,7 +1,10 @@
 function calcula(){
-    var peso = parseFloat(document.getElementById = "peso");
-    var altura = parseFloat(document.getElementById = "altura");
-    var imc;
-    imc = peso / (altura * 2);
-    console.log(imc);
-}
+    var peso, altura, imc;
+
+    peso = frmIMC.txtPeso.value;
+    altura = frmIMC.txtAltura.value;
+    peso = parseFloat(peso);
+    altura = parseFloat(altura);
+    imc = (peso / (altura * altura));
+    frmIMC.txtIMC.value = imc.toFixed(1);
+} 
