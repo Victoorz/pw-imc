@@ -1,3 +1,21 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @Victoorz
+ Sign out
+ Watch 1
+  Star 0
+  Fork 0 rodrigorfh/CalculoImc
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs
+Branch: master Find file Copy pathCalculoImc/pom.xml
+5bc9bae  7 days ago
+@rodrigorfh rodrigorfh inclusao maven
+1 contributor
+RawBlameHistory     
+34 lines (30 sloc)  1.03 KB
 <project
   xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -5,13 +23,29 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>br.ufg.inf</groupId>
+  <groupId>Calculo</groupId>
   <artifactId>pw-imc</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
   <properties>
+    <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <failOnMissingWebXml>false</failOnMissingWebXml>
   </properties>
 
+ <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.0</version>
+		<configuration>
+			<port>9090</port>
+		</configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
